@@ -92,10 +92,44 @@ git clone https://github.com/yourusername/nasarasa.git
    ```
 3. The code in actions.py references NASA_API_KEY. Alternatively, you can hard-code it.
 
+---
+
 ## 6. Example runs
 ### 6.1 NASA Astronomy Picture of the Day
 ```bash
-Your input -> Show me NASA’s picture
-Bot -> “**Parhelia at Abisko** ... See more: https://apod.nasa.gov/apod/...” 
+Your input ->  I want the astronomy picture of the day from 2013-04-15
+Bot -> **IC 1848: The Soul Nebula**
+Stars are forming in the Soul of the Queen of Aethopia. More specifically, a large star forming region called the Soul Nebula can be found in the direction of the constellation Cassiopeia, who Greek mythology credits as the vain wife of a King who long ago ruled lands surrounding the upper Nile river. The Soul Nebula houses several open clusters of stars, a large radio source known as W5, and huge...
+See more: https://apod.nasa.gov/apod/image/1304/soul_andersson_960.jpg
 ```
 ### 6.2 Near-Earth Objects
+```bash
+Your input ->  Near Earth objects on 2014-04-15
+Bot -> On 2014-04-15, one NEObject is '392211 (2009 TG10)', diameter ~1853.70 m.
+Potentially hazardous? No.
+Source: NASA’s NEO API.
+```
+### 6.3 Mars Rover Photos
+```bash
+Your input ->  Perseverance rover image
+Bot -> Here’s the latest photo from rover 'Perseverance'!
+Camera: Mast Camera Zoom - Right
+Earth Date: 2025-02-15
+Photo URL: https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01419/ids/edr/browse/zcam/ZR0_1419_0792910337_285EBY_N0690000ZCAM09470_1100LMJ01_1200.jpg
+```
+### 6.4 Largest Moon (Mock)
+```bash
+Your input ->  what's the largest moon?
+Bot -> Ganymede, a moon of Jupiter, is the largest moon in the solar system.
+```
+
+---
+
+## 8. Conclusion
+
+This chatbot demonstrates:
+
+- **Real-time NASA data** (APOD, NEO, Mars Rover).  
+- A **mock Q&A flow** (largest moon).  
+- Handling **Rasa 3.x** domain/rules, with robust error handling and clear story/rule logic.
+
