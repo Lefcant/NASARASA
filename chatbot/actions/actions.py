@@ -46,7 +46,7 @@ class ActionLargestMoon(Action):
         dispatcher.utter_message(text="The largest moon in the solar system is Ganymede, which orbits Jupiter. It’s even bigger than Mercury!")
         return []
 
-NASA_API_KEY = "hebtWuyeIWGiNTuV82Rd4PqWeVdTdfbQ8Lv5LDxR"  # store securely, e.g., in an .env file
+NASA_API_KEY = "INSERT YOUR NASA API"  # store securely, e.g., in an .env file
 
 class ActionFetchNasaApod(Action):
     def name(self) -> Text:
