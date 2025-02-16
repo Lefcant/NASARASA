@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- rule: user asks for mars rover photos
+  steps:
+    - intent: ask_mars_photos
+    - action: action_fetch_mars_photos
+
+- rule: Fallback when NLU confidence is low
+  steps:
+    - intent: nlu_fallback
+    - action: utter_default

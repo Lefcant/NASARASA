@@ -1,0 +1,35 @@
+version: "3.1"
+
+stories:
+
+- story: greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: What's the largest moon?
+  steps:
+    - intent: largest_moon
+    - action: action_largest_moon
+
+- story: User asks for NASA APOD
+  steps:
+    - intent: fetch_nasa_apod
+    - action: action_fetch_nasa_apod
+    - action: utter_fetch_nasa_apod
+
+- story: User asks for Near-Earth Objects
+  steps:
+    - intent: fetch_neo_info
+    - action: action_fetch_neo_info
+    - action: utter_fetch_neo_info
+
+- story: Goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: User asks for Mars rover photos
+  steps:
+    - intent: ask_mars_photos
+    - action: action_fetch_mars_photos

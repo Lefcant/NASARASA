@@ -1,0 +1,77 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - largest_moon
+  - fetch_nasa_apod
+  - fetch_neo_info
+  - ask_mars_photos
+
+entities:
+  - date
+  - rover_name
+
+slots:
+  query_date:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date
+  # Which Mars rover the user wants
+  rover_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: rover_name
+
+responses:
+  utter_greet:
+    - text: >
+        Hey there! How's your day going so far? I'm here to assist with 
+        space and astronomy questions!
+    - text: >
+        Hello, welcome back! How are you doing? Feel free to 
+        ask me anything about space!
+    - text: >
+        Hi there! Great to see you. Let me know what space-related 
+        topic is on your mind!
+
+  utter_goodbye:
+    - text: >
+        Bye for now! Let me know if you have any other questions!
+
+  utter_iamabot:
+    - text: >
+        I'm definitely a bot, but I'm always learning. 
+        How can I help you today?
+    
+  utter_default:
+    - text: >
+        Sorry, I’m not entirely sure what you mean. 
+        Can you rephrase or ask a different question?
+        
+  utter_fetch_nasa_apod:
+    - text: >
+        Here’s your Astronomy Picture of the Day! Pretty fascinating, right?
+
+  utter_fetch_neo_info:
+    - text: >
+        I've got the near-Earth object data for you. 
+        Crazy how much is out there, isn’t it?
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_largest_moon
+  - action_fetch_nasa_apod
+  - action_fetch_neo_info
+  - action_fetch_mars_photos
+  - action_default_fallback

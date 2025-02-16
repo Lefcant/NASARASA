@@ -1,0 +1,93 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hey buddy
+    - Good day
+    - Hello chatbot
+    - Hi there
+    - Greetings
+    - Yo
+    - Hello again
+    - Checking in
+
+- intent: largest_moon
+  examples: |
+    - What's the largest moon in the solar system?
+    - Which moon is the biggest in our solar system?
+    - largest moon
+
+- intent: fetch_nasa_apod
+  examples: |
+    - Show me today's NASA picture
+    - I'd like to see the Astronomy Picture of the Day
+    - APOD please
+    - What about yesterday's(date) Image of the Day?
+    - I want the picture of the day from [2022-04-15](date)
+    - I want the image of [January 7th](date)
+    - I want the picture of [May 26th](date)
+    - I want the photo of [15/04/2021](date)
+
+- intent: fetch_neo_info
+  examples: |
+    - Are there any asteroids passing near Earth today?
+    - Show me near earth objects for [2023-01-01](date)
+    - I'd like near earth objects for [2025-02-16](date)
+    - NE objects for [2023-12-24](date)
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_mars_photos
+  examples: |
+    - Show me the latest photos from the [Curiosity](rover_name) rover
+    - I'd like to see pictures from [Perseverance](rover_name)
+    - Mars rover photos from [Curiosity](rover_name)
