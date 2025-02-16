@@ -82,8 +82,19 @@ These scenarios illustrate both **real-time data fetching** (NASA) and a **mock*
 
 ### Clone & Install
 ```bash
-git clone https://github.com/yourusername/nasarasa.git
+git clone https://github.com/Lefcant/NASARASA.git
 ```
+
+No further environment requirements have to be setup for this bot to work. Just install Rasa, change to the bot directory and run
+```bash
+rasa run actions --port 5055
+```
+in one powershell instance and 
+```bash
+rasa shell
+```
+in another.
+
 ### NASA API Keys
 1. Get a free API key from https://api.nasa.gov.
 2. Store it in a .env or environment variable. Example:
